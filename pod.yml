@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+spec:
+  restartPolicy: Never
+  containers:
+  - name: hello-world-pod
+    image: "hello-world"
+    imagePullPolicy: Never
+    command: [ "sleep" ]
+    args: [ "infinity" ]
