@@ -8,6 +8,6 @@ const server = http.createServer((req,res) => {
 	res.end('Hello, World!');
 });
 
-server.listen(port,hostname, () => {
+server.listen(port, () => {
 	console.log(`server running at http://${hostname}:${port}/`);
 });
