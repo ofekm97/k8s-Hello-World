@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: deployment
+metadata:
+  name: hello-world-dep
+spec:
+  replicas: 3
+  image: gcr.io/k8s-hello-world-312614/hello-app:v1
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: gcr.io/k8s-hello-world-312614/hello-app:v1
+        ports:
+        - containterPort: 3000
