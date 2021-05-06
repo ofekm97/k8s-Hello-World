@@ -15,3 +15,16 @@ kubectl:
 * kubectl port-forward service/<deployment_name> <port_num>:3000 // Access the application in the cluster from cluster port 3000 via localhost port <port_num>
   
 go to http:/localhost:<port_num>/
+
+
+
+# Upload your image to gcp
+first, you will need to set a paying account in gcp.
+open gcp cloud console:
+* clone your project
+* build you docker image
+* upload your image to the container registry
+* create a GKE cluster
+* run:
+    * kubectl apply -f deployment.yaml
+    * kubectl apply -f service.yaml
